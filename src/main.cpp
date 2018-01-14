@@ -29,7 +29,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x14dc23f54de47df797172d66531e7a115b782e65f69dda7bf5a4e98fac0ae086");
+uint256 hashGenesisBlock("0xf6ce4256f5aa0f534dfef0b3622727ff98f25803aaff5f8dc3df9d90cf6ab4c7");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2009,7 +2009,7 @@ bool LoadBlockIndex(bool fAllowNew)
 	// Genesis block:
 	/*
 	block.nTime = 1515956261 
-	block.nNonce = 2086299649 
+	block.nNonce = 2086638220 
 	block.GetHash = 14dc23f54de47df797172d66531e7a115b782e65f69dda7bf5a4e98fac0ae086
 	CBlock(hash=14dc23f54de47df79717, PoW=00000aeb1f05fbf0b2fa, ver=1, 			hashPrevBlock=00000000000000000000, hashMerkleRoot=ef7e256a2c, 			nTime=1399574511, nBits=1e0ffff0, nNonce=2086299649, vtx=1)
   	CTransaction(hash=ef7e256a2c, ver=1, vin.size=1, vout.size=1, nLockTime=0)
@@ -2032,7 +2032,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = 1400539822;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 2086299649;
+        block.nNonce   = 2086638220;
 
         if (fTestNet)
         {
@@ -2044,10 +2044,10 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("%s\n", block.GetHash().ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0xef7e256a2cf2d38576225af2775a1e8160928a0c78526ab3615615d1ff16870e"));
+        assert(block.hashMerkleRoot == uint256("0x8e104db7f6e124fdb88b8c0fc4b8d951a65925686088c66930356aeede2fed0f"));
 
         // If genesis block hash does not match, then generate new genesis hash.
-        if (true && block.GetHash() != hashGenesisBlock)
+        if (false && block.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
