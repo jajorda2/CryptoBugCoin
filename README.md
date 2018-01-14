@@ -1,0 +1,2 @@
+# CryptoBugCoin
+Forked from Learncoin
